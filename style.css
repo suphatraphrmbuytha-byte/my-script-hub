@@ -1,0 +1,721 @@
+```css
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+ 
+body{
+    background:
+    radial-gradient(circle at top,#10204a 0%,#0b1120 40%),
+    #0b1120;
+    color:white;
+    font-family:'Prompt',sans-serif;
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:rgba(10,15,30,.9);
+    position:sticky;
+    top:0;
+    z-index:100;
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+}
+
+.logo-text{
+    font-size:24px;
+    font-weight:700;
+}
+
+.hero{
+    text-align:center;
+    padding:90px 20px;
+}
+
+/* โลโก้ลอยขึ้นลง */
+.main-logo{
+    width:180px;
+    margin-bottom:20px;
+    animation:floatMainLogo 3s ease-in-out infinite;
+}
+
+@keyframes floatMainLogo{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+/* VPN SHOP แสงวิ่ง + ลอย */
+.hero h1{
+    font-size:60px;
+    margin-bottom:15px;
+    font-weight:700;
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #00ffff,
+        #ffffff
+    );
+
+    background-size:200% auto;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:
+    shineText 3s linear infinite,
+    floatTitle 3s ease-in-out infinite;
+}
+
+@keyframes shineText{
+
+    from{
+        background-position:-200%;
+    }
+
+    to{
+        background-position:200%;
+    }
+
+}
+
+@keyframes floatTitle{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-12px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+.hero h2{
+    color:#9ca3af;
+    font-size:24px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:#cbd5e1;
+    margin-bottom:30px;
+}
+
+.main-btn,
+.buy-btn{
+    background:linear-gradient(90deg,#2563eb,#38bdf8);
+    border:none;
+    color:white;
+    padding:15px 30px;
+    border-radius:15px;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+.main-btn:hover,
+.buy-btn:hover{
+    transform:translateY(-3px);
+}
+
+.features{
+    padding:70px 8%;
+}
+
+.features h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.feature-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.feature-card{
+    background:#111827;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.06);
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 0 20px rgba(56,189,248,.3),
+    0 0 40px rgba(56,189,248,.15);
+}
+```css id="eh3j8n"
+#packages{
+    padding:80px 8%;
+}
+
+.title-package{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.package-card{
+    background:#111827;
+    padding:25px;
+    border-radius:25px;
+    margin-bottom:30px;
+    border:1px solid rgba(255,255,255,.08);
+    transition:0.4s;
+    position:relative;
+    overflow:hidden;
+}
+
+.package-card:hover{
+    transform:translateY(-8px);
+    box-shadow:
+    0 0 20px rgba(56,189,248,.3),
+    0 0 40px rgba(56,189,248,.2),
+    0 0 60px rgba(56,189,248,.1);
+}
+
+.package-img{
+    width:100%;
+    border-radius:20px;
+    margin-bottom:20px;
+}
+
+.status{
+    color:#22c55e;
+    margin-bottom:15px;
+}
+
+.package-card h2{
+    margin-bottom:15px;
+}
+
+.package-card h3{
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.package-card p{
+    margin-bottom:10px;
+    color:#d1d5db;
+}
+
+.price-box{
+    background:#0f172a;
+    padding:20px;
+    border-radius:20px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.price-box h1{
+    color:gold;
+}
+
+.price-box h2{
+    color:#00ff99;
+}
+
+.online-users{
+    text-align:center;
+    color:#38bdf8;
+    font-size:18px;
+    font-weight:600;
+    margin-bottom:50px;
+}
+
+.server-status{
+    padding:80px 8%;
+}
+
+.server-status h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.server-box{
+    margin-bottom:25px;
+}
+
+.bar{
+    width:100%;
+    height:18px;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    border-radius:20px;
+}
+
+.thai{
+    width:90%;
+    background:#22c55e;
+}
+
+.sg{
+    width:75%;
+    background:#38bdf8;
+}
+
+.faq{
+    padding:80px 8%;
+}
+
+.faq h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.faq-box{
+    background:#111827;
+    padding:25px;
+    border-radius:20px;
+    margin-bottom:20px;
+    transition:.3s;
+}
+
+.faq-box:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 0 20px rgba(56,189,248,.25);
+}
+```css id="yt6v2m"
+.contact{
+    padding:80px 8%;
+    text-align:center;
+}
+
+.contact p{
+    margin:20px 0;
+}
+
+footer{
+    background:#020617;
+    text-align:center;
+    padding:40px 20px;
+    color:#94a3b8;
+}
+
+.online-bar{
+    background:#16a34a;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+}
+
+.fb-float{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#1877f2;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:28px;
+    text-decoration:none;
+    z-index:999;
+    animation:fbGlow 2s infinite;
+}
+#topBtn{
+    position:fixed;
+    left:20px;
+    bottom:20px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    cursor:pointer;
+    display:none;
+}
+
+/* โลโก้พื้นหลังลอยไปมา */
+.floating-logo{
+    position:fixed;
+    top:120px;
+    left:50px;
+    opacity:0.08;
+    pointer-events:none;
+    animation:floatLogo 8s ease-in-out infinite;
+}
+
+.floating-logo img{
+    width:220px;
+}
+
+@keyframes floatLogo{
+
+    0%{
+        transform:translate(0,0);
+    }
+
+    50%{
+        transform:translate(80px,40px);
+    }
+
+    100%{
+        transform:translate(0,0);
+    }
+
+}
+
+@media(max-width:768px){
+
+    nav{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .hero h1{
+        font-size:42px;
+    }
+
+    .hero h2{
+        font-size:20px;
+    }
+
+}
+```
+/* =========================
+   รีวิวลูกค้า
+========================= */
+.review-section{
+    padding:80px 8%;
+}
+
+.review-section h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.review-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.review-card{
+    background:#111827;
+    padding:25px;
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.review-card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+/* =========================
+   Countdown
+========================= */
+.countdown-box{
+    background:#111827;
+    padding:30px;
+    margin:60px 8%;
+    border-radius:25px;
+    text-align:center;
+}
+
+.countdown-box h2{
+    margin-bottom:20px;
+    color:#00ffff;
+}
+
+#countdown{
+    font-size:32px;
+    color:gold;
+    font-weight:700;
+}
+
+/* =========================
+   Best Seller
+========================= */
+.best-seller{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:red;
+    color:white;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* =========================
+   จำนวนผู้ซื้อ
+========================= */
+.buyer-count{
+    text-align:center;
+    margin-top:15px;
+    color:#22c55e;
+    font-weight:600;
+}
+
+/* =========================
+   Server Status
+========================= */
+.server-status{
+    padding:80px 8%;
+}
+
+.server-status h2{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.server-box{
+    margin-bottom:25px;
+}
+
+.bar{
+    width:100%;
+    height:18px;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.fill{
+    height:100%;
+    border-radius:20px;
+}
+
+.thai{
+    width:92%;
+    background:#22c55e;
+}
+
+.sg{
+    width:80%;
+    background:#38bdf8;
+}
+
+/* =========================
+   คูปอง
+========================= */
+.coupon-box{
+    background:#111827;
+    padding:30px;
+    border-radius:25px;
+    margin:60px 8%;
+    text-align:center;
+}
+
+.coupon-box h2{
+    margin-bottom:20px;
+}
+
+.coupon-code{
+    color:gold;
+    font-size:30px;
+    font-weight:700;
+}
+
+/* =========================
+   Popup
+========================= */
+.popup{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background:#111827;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+    z-index:9999;
+    box-shadow:0 0 40px rgba(0,255,255,.3);
+}
+
+.popup button{
+    margin-top:20px;
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:15px;
+    cursor:pointer;
+}
+
+/* =========================
+   Dark / Light Mode
+========================= */
+.light-mode{
+    background:#f4f4f4;
+    color:black;
+}
+
+.light-mode .package-card,
+.light-mode .feature-card,
+.light-mode .faq-box,
+.light-mode .review-card{
+    background:white;
+    color:black;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media(max-width:768px){
+
+    .review-grid{
+        grid-template-columns:1fr;
+    }
+
+    #countdown{
+        font-size:24px;
+    }
+
+}
+/* ===== ป้ายแพ็กเกจ ===== */
+.best-seller{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:red;
+    color:white;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    z-index:10;
+}
+
+/* ===== แถบสถานะด้านบน ===== */
+.online-bar{
+    background:#16a34a;
+    text-align:center;
+    padding:15px;
+    font-weight:600;
+}
+
+/* ===== เอฟเฟกต์ปุ่ม ===== */
+.buy-btn:hover,
+.main-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 0 20px rgba(56,189,248,.5);
+}
+
+/* ===== เอฟเฟกต์การ์ดข้อดี ===== */
+.feature-card{
+    transition:.3s;
+}
+
+.feature-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 20px rgba(56,189,248,.25);
+}
+.best-seller{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:red;
+    color:white;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:600;
+    z-index:10;
+}
+@keyframes fbGlow{
+
+    0%{
+        box-shadow:0 0 10px #1877f2;
+    }
+
+    50%{
+        box-shadow:0 0 25px #1877f2;
+    }
+
+    100%{
+        box-shadow:0 0 10px #1877f2;
+    }
+
+}
+ 
+.promo-banner{
+    background:linear-gradient(90deg,#ff8a00,#ff3d00);
+    color:white;
+    text-align:center;
+    padding:20px;
+    border-radius:20px;
+    width:90%;
+    max-width:900px;
+    margin:30px auto;
+    box-shadow:0 0 25px rgba(255,120,0,.4);
+}
+
+.promo-banner h2{
+    margin-bottom:10px;
+}
+.promo-popup{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.6);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.promo-box{
+    background:#111827;
+    padding:30px;
+    width:320px;
+    border-radius:20px;
+    text-align:center;
+    position:relative;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.promo-box h1{
+    color:gold;
+}
+
+.close-popup{
+    position:absolute;
+    top:15px;
+    right:15px;
+    cursor:pointer;
+    font-size:20px;
+}
