@@ -1,0 +1,90 @@
+```html
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สมัครสมาชิก</title>
+
+<style>
+
+body{
+    background:#0b1120;
+    color:white;
+    font-family:sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+.box{
+    background:#111827;
+    padding:30px;
+    border-radius:20px;
+    width:320px;
+}
+
+input{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border:none;
+    border-radius:10px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    margin-top:20px;
+    border:none;
+    border-radius:10px;
+    background:#16a34a;
+    color:white;
+    cursor:pointer;
+}
+
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>📝 สมัครสมาชิก</h2>
+
+<input type="text" id="username" placeholder="ชื่อผู้ใช้">
+
+<input type="password" id="password" placeholder="รหัสผ่าน">
+
+<button onclick="register()">
+สมัครสมาชิก
+</button>
+
+</div>
+
+<script>
+
+function register(){
+
+localStorage.setItem(
+"username",
+document.getElementById("username").value
+);
+
+localStorage.setItem(
+"password",
+document.getElementById("password").value
+);
+
+alert("สมัครสมาชิกสำเร็จ");
+
+window.location.href="index.html";
+
+}
+
+</script>
+
+</body>
+</html>
+```
