@@ -496,23 +496,48 @@ function buyPackage(packageName, price){
     if(!username){
 
         alert("กรุณาเข้าสู่ระบบก่อน");
-
         return;
 
     }
 
-    let confirmBuy = confirm(
-        "ยืนยันการสั่งซื้อ " + packageName +
-        "\nราคา " + price + " บาท ?"
-    );
-
-    if(confirmBuy){
-
-        alert(
-            "กำลังเชื่อมระบบซื้ออัตโนมัติ...\n\nกรุณาอย่าปิดหน้านี้"
-        );
-
+    if(!confirm(
+        "ยืนยันการสั่งซื้อ " +
+        packageName +
+        "\nราคา " +
+        price +
+        " บาท ?"
+    )){
+        return;
     }
+
+    fetch(
+    "https://script.google.com/macros/s/AKfycbzwjgBRgtqQx9xPno366O-lDS_b13yyKmkDoxL3qhzYdVYFV9dWVkC5UoukjRS7tR1ozA/exec?action=buy&username="
+    + encodeURIComponent(username)
+    + "&package="
+    + encodeURIComponent(packageName)
+    + "&price="
+    + price
+    )
+
+    .then(response => response.text())
+
+    .then(result => {
+
+        if(result == "success"){
+
+            alert("สั่งซื้อสำเร็จ 🎉");
+
+        }else if(result == "not enough"){
+
+            alert("เครดิตไม่เพียงพอ");
+
+        }else{
+
+            alert(result);
+
+        }
+
+    });
 
 }
 </script>
