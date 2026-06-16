@@ -491,13 +491,28 @@ topBtn.onclick = function(){
 };
 function buyPackage(packageName, price){
 
-let username = localStorage.getItem("userLogin");
+    let username = localStorage.getItem("userLogin");
 
-alert(
-"สั่งซื้อ " + packageName +
-"\nราคา " + price + " บาท" +
-"\n\nกรุณาแคปหน้าจอนี้แล้วส่งไปที่ Facebook : นนท์ มินิ"
-);
+    if(!username){
+
+        alert("กรุณาเข้าสู่ระบบก่อน");
+
+        return;
+
+    }
+
+    let confirmBuy = confirm(
+        "ยืนยันการสั่งซื้อ " + packageName +
+        "\nราคา " + price + " บาท ?"
+    );
+
+    if(confirmBuy){
+
+        alert(
+            "กำลังเชื่อมระบบซื้ออัตโนมัติ...\n\nกรุณาอย่าปิดหน้านี้"
+        );
+
+    }
 
 }
 </script>
